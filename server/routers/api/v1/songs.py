@@ -4,9 +4,9 @@ from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse, Response
 from redis.asyncio import Redis
 
-from server_types import Song
-from utils.music import search_songs, get_song
-from dependencies import get_redis
+from server.server_types import Song
+from server.utils.music import search_songs, get_song
+from server.dependencies import get_redis
 
 router = APIRouter(
     prefix="/songs",

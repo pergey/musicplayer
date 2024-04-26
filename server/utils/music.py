@@ -8,9 +8,9 @@ from pathlib import Path
 import ffmpeg
 from redis.asyncio import Redis
 
-from config import STATIC_DIR
-from server_types import Song
-from utils.time import pretty_time
+from server.config import STATIC_DIR
+from server.server_types import Song
+from server.utils.time import pretty_time
 
 headers = {
     "Origin": "https://music.youtube.com",

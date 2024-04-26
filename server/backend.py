@@ -13,7 +13,7 @@ app = FastAPI(
     # docs_url=None, redoc_url=None, openapi_url=None
     dependencies=[Depends(get_redis)],
 )
-app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+app.mount("static", StaticFiles(directory=STATIC_DIR), name="static")
 
 
 @app.get("/")

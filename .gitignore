@@ -1,6 +1,5 @@
-.env
-temp
+server/.env
+server/temp
 .idea/
-static/
-pyproject.toml
+server/static/
 poetry.lock
