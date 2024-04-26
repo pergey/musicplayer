@@ -1,0 +1,6 @@
+.env
+temp
+.idea/
+static/
+pyproject.toml
+poetry.lock
