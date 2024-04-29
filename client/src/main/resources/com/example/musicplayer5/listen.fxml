@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayer5.PlayerController">
+   <children>
+      <HBox prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="back" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../images/icons/up-arrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ImageView fx:id="songImage" fitHeight="196.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/icons/music_8177440.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="songName" text="Music Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="songAuthor" text="Author" />
+      <Pane prefHeight="9.0" prefWidth="600.0" />
+      <ProgressBar fx:id="progressBar" prefHeight="10.0" prefWidth="394.0" progress="0.0" />
+      <HBox alignment="CENTER" prefHeight="18.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="startTime" />
+            <Pane prefHeight="18.0" prefWidth="365.0" />
+            <Label fx:id="endTime" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Pane prefHeight="42.0" prefWidth="126.0" />
+            <ImageView fx:id="previous" fitHeight="40.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icons/prev.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="play" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icons/pause.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="next" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icons/next.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="cbSpeed" prefHeight="26.0" prefWidth="80.0" promptText="Speed" />
+            <Slider fx:id="sVolume" prefHeight="14.0" prefWidth="97.0" value="50.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
