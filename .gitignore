@@ -2,4 +2,4 @@ server/.env
 server/temp
 .idea/
 server/static/
-poetry.lock
+server/poetry.lock

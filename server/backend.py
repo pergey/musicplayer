@@ -1,4 +1,3 @@
-import uvicorn
 from fastapi import FastAPI, Depends
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -9,10 +8,7 @@ from dependencies import get_redis
 from routers import router
 
 
-app = FastAPI(
-    # docs_url=None, redoc_url=None, openapi_url=None
-    dependencies=[Depends(get_redis)],
-)
+app = FastAPI(dependencies=[Depends(get_redis)])
 app.mount("static", StaticFiles(directory=STATIC_DIR), name="static")
 
 
@@ -30,6 +26,3 @@ register_tortoise(
     generate_schemas=False,
     add_exception_handlers=True,
 )
-
-if __name__ == "__main__":
-    uvicorn.run("backend:app")
